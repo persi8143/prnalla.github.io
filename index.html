@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prashanth Nalla — Senior DevOps Engineer specializing in Cloud, SRE, GitOps, and Platform Engineering. Open to new opportunities." />
+  <meta name="keywords" content="DevOps Engineer, SRE, Platform Engineering, Kubernetes, AWS, Azure, Terraform, GitOps, Cloud Infrastructure" />
+  <meta name="author" content="Prashanth Nalla" />
+  <title>Prashanth Nalla | Senior DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">PN<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to Opportunities
+      </div>
+      <h1 class="hero-name">Prashanth <span class="accent">Nalla</span></h1>
+      <h2 class="hero-title">
+        <span class="typing-text" id="typingText"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-summary">
+        7+ years engineering highly available cloud platforms across insurance, financial services, and enterprise tech.
+        I turn complex infrastructure into reliable, automated, observable systems.
+      </p>
+      <div class="hero-certs">
+        <span class="cert-badge"><i class="fab fa-aws"></i> AWS DevOps Pro</span>
+        <span class="cert-badge"><i class="fas fa-dharmachakra"></i> CKA</span>
+      </div>
+      <div class="hero-actions">
+        <a href="mailto:prnalla.2312@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Get In Touch</a>
+        <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" class="btn btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-header">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">prashanth@devops:~$</span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-cmd">$ kubectl get pods -n production</span></div>
+        <div class="t-line t-out">NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;READY&nbsp;&nbsp;STATUS&nbsp;&nbsp;&nbsp;AGE</div>
+        <div class="t-line t-out">api-gateway-7d9f8b&nbsp;&nbsp;1/1&nbsp;&nbsp;&nbsp;Running&nbsp;&nbsp;7d</div>
+        <div class="t-line t-out">auth-service-4c2a1&nbsp;&nbsp;1/1&nbsp;&nbsp;&nbsp;Running&nbsp;&nbsp;7d</div>
+        <div class="t-line t-out">data-pipeline-9e3b&nbsp;&nbsp;1/1&nbsp;&nbsp;&nbsp;Running&nbsp;&nbsp;3d</div>
+        <div class="t-line"><span class="t-cmd">$ terraform apply -auto-approve</span></div>
+        <div class="t-line t-success">Apply complete! 12 resources added.</div>
+        <div class="t-line"><span class="t-cmd">$ argocd app sync production <span class="t-blink">&#9607;</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// about me</span>
+        <h2>Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a <strong>Senior DevOps Engineer</strong> based in Markham, Ontario, with over 7 years of experience
+            building and operating cloud-native platforms in regulated industries. My work spans the full infrastructure
+            lifecycle — from architecture and IaC design through CI/CD automation, observability, and 24x7 production reliability.
+          </p>
+          <p>
+            I specialize in bridging the gap between development velocity and operational stability — using GitOps,
+            SRE practices, and DevSecOps to deliver platforms that are fast to deploy, hard to break, and easy to operate.
+          </p>
+          <p>
+            I'm currently open to <strong>Senior DevOps, Platform Engineering, SRE, and Cloud Infrastructure</strong> roles
+            where I can drive meaningful impact at scale.
+          </p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Years Experience</span></div>
+            <div class="stat"><span class="stat-num">3</span><span class="stat-label">Industries</span></div>
+            <div class="stat"><span class="stat-num">99%+</span><span class="stat-label">Platform Uptime</span></div>
+            <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Teams Supported</span></div>
+          </div>
+        </div>
+        <div class="about-info">
+          <div class="info-card">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Markham, Ontario, Canada</span></div>
+            <div class="info-item"><i class="fas fa-briefcase"></i><span>Open to Full-Time Roles</span></div>
+            <div class="info-item"><i class="fas fa-globe"></i><span>On-site / Hybrid / Remote</span></div>
+            <div class="info-item"><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank">linkedin.com/in/prashanth-nalla</a></div>
+            <div class="info-item"><i class="fas fa-envelope"></i><a href="mailto:prnalla.2312@gmail.com">prnalla.2312@gmail.com</a></div>
+            <div class="info-item"><i class="fas fa-phone"></i><span>+1 519-465-2312</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// tech stack</span>
+        <h2>Core Skills &amp; Tools</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><i class="fas fa-cloud"></i> Cloud Platforms</div>
+          <div class="skill-tags">
+            <span class="tag aws">AWS</span><span class="tag">EKS</span><span class="tag">EC2</span>
+            <span class="tag">S3</span><span class="tag">Lambda</span><span class="tag">CloudWatch</span>
+            <span class="tag">IAM</span><span class="tag">KMS</span>
+            <span class="tag azure">Azure</span><span class="tag">AKS</span>
+            <span class="tag">Azure DevOps</span><span class="tag">Azure Functions</span><span class="tag">Key Vault</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><i class="fas fa-code-branch"></i> CI/CD &amp; GitOps</div>
+          <div class="skill-tags">
+            <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">Argo CD</span>
+            <span class="tag">Azure DevOps Pipelines</span><span class="tag">AWS CodePipeline</span>
+            <span class="tag">IBM UrbanCode Deploy</span><span class="tag">SonarQube</span>
+            <span class="tag">Nexus</span><span class="tag">Artifactory</span><span class="tag">ARC Runners</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><i class="fas fa-dharmachakra"></i> Containers &amp; Orchestration</div>
+          <div class="skill-tags">
+            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Helm</span>
+            <span class="tag">Kustomize</span><span class="tag">HPA</span><span class="tag">EKS</span>
+            <span class="tag">AKS</span><span class="tag">Registry Proxy</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><i class="fas fa-layer-group"></i> IaC &amp; Config Management</div>
+          <div class="skill-tags">
+            <span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">CloudFormation</span>
+            <span class="tag">ARM Templates</span><span class="tag">Helm Charts</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><i class="fas fa-chart-line"></i> Observability &amp; SRE</div>
+          <div class="skill-tags">
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Splunk</span>
+            <span class="tag">ELK Stack</span><span class="tag">Dynatrace</span><span class="tag">OpenTelemetry</span>
+            <span class="tag">Nagios</span><span class="tag">CloudWatch</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><i class="fas fa-shield-alt"></i> Security &amp; DevSecOps</div>
+          <div class="skill-tags">
+            <span class="tag">HashiCorp Vault</span><span class="tag">Aqua Security</span>
+            <span class="tag">IAM / RBAC</span><span class="tag">KMS</span><span class="tag">OWASP</span>
+            <span class="tag">Shift-Left Security</span><span class="tag">Vulnerability Scanning</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><i class="fas fa-terminal"></i> Scripting &amp; Automation</div>
+          <div class="skill-tags">
+            <span class="tag">Python</span><span class="tag">Bash</span><span class="tag">Shell Scripting</span>
+            <span class="tag">AWS Lambda</span><span class="tag">AWS Step Functions</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><i class="fas fa-robot"></i> AI-Assisted Engineering</div>
+          <div class="skill-tags">
+            <span class="tag ai">Claude AI</span><span class="tag ai">GitHub Copilot</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// career timeline</span>
+        <h2>Professional Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <!-- AMD -->
+        <div class="timeline-item">
+          <div class="timeline-marker current"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-role">Senior DevOps Engineer</h3>
+                <div class="tc-company">AMD <span class="tc-location"><i class="fas fa-map-marker-alt"></i> Markham, Ontario</span></div>
+              </div>
+              <div class="tc-meta">
+                <span class="tc-date">July 2025 – Present</span>
+                <span class="tc-badge current-badge">Current</span>
+              </div>
+            </div>
+            <div class="tc-stack">
+              <span class="ts">Jenkins</span><span class="ts">GitHub Actions</span><span class="ts">Argo CD</span>
+              <span class="ts">AKS</span><span class="ts">Docker</span><span class="ts">Terraform</span>
+              <span class="ts">Prometheus</span><span class="ts">Grafana</span><span class="ts">Dynatrace</span>
+              <span class="ts">HashiCorp Vault</span><span class="ts">Aqua Security</span>
+              <span class="ts">ARC Runners</span><span class="ts">GitHub Copilot</span><span class="ts">Claude AI</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Architected end-to-end <strong>GitOps pipelines using Jenkins, GitHub Actions, and Argo CD</strong>, standardizing declarative continuous delivery across microservices and reducing release lead time across dev, staging, and production environments.</li>
+              <li>Configured and managed <strong>GitHub ARC self-hosted runners</strong> (actions-runner-controller) including registry proxy configuration and dedicated monitoring solutions, enabling secure, scalable, and observable CI execution within the enterprise perimeter.</li>
+              <li>Designed and provisioned production-grade <strong>AKS and AWS infrastructure using Terraform and Ansible</strong>, implementing high availability, automated drift detection, and compliance guardrails for regulated workloads.</li>
+              <li>Administered <strong>AKS clusters</strong> at scale, implementing blue-green and canary deployment strategies, HPA-based autoscaling, and namespace-level workload isolation to maximize cluster efficiency and deployment safety.</li>
+              <li>Established centralized observability integrating <strong>Prometheus, Grafana, and Dynatrace APM</strong>, enabling full-stack distributed tracing across microservices and reducing mean time to detect (MTTD) across cloud infrastructure.</li>
+              <li>Embedded <strong>DevSecOps practices</strong> across the SDLC: automated vulnerability scanning, secrets management via <strong>HashiCorp Vault</strong>, container security with <strong>Aqua Security</strong>, and IAM least-privilege hardening.</li>
+              <li>Leveraged <strong>AI-assisted engineering tools (Claude AI, GitHub Copilot)</strong> to accelerate infrastructure automation, IaC code generation, and runbook development — improving team productivity and reducing operational toil.</li>
+              <li>Led <strong>24x7 production support operations</strong>, implementing self-healing automation, structured runbooks, and incident response workflows to reduce MTTR and maintain platform SLA adherence.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cognizant -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-role">Senior Infrastructure Developer</h3>
+                <div class="tc-company">Cognizant</div>
+              </div>
+              <div class="tc-meta">
+                <span class="tc-date">Mar 2021 – Jul 2024</span>
+                <span class="tc-duration">3 yrs 5 mos</span>
+              </div>
+            </div>
+            <div class="tc-stack">
+              <span class="ts">Jenkins</span><span class="ts">EKS</span><span class="ts">AKS</span>
+              <span class="ts">Terraform</span><span class="ts">Ansible</span><span class="ts">SonarQube</span>
+              <span class="ts">Splunk</span><span class="ts">Dynatrace</span><span class="ts">Docker</span>
+              <span class="ts">IBM UrbanCode Deploy</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Spearheaded an <strong>enterprise-wide CI/CD transformation across 15+ Agile teams</strong>, standardizing pipeline architecture with Jenkins, SonarQube, Nexus, Docker, and IBM UrbanCode Deploy — improving build consistency and eliminating manual release bottlenecks.</li>
+              <li>Designed, hardened, and operated <strong>Kubernetes platforms (EKS and AKS)</strong> supporting large-scale microservices, enforcing RBAC, network policies, and cluster-level security baselines across multi-tenant environments.</li>
+              <li>Built a library of <strong>reusable Terraform and Ansible IaC modules</strong>, enabling teams to provision consistent, policy-compliant environments across multiple AWS and Azure regions — reducing provisioning time from days to hours.</li>
+              <li>Engineered <strong>Splunk and Dynatrace dashboards</strong> aggregating logs, traces, and metrics across enterprise Kubernetes platforms — improving anomaly detection and contributing to sustained <strong>99%+ platform availability</strong>.</li>
+              <li>Delivered <strong>Database-as-Code (DBaC) pipelines</strong> for Oracle and PostgreSQL, integrating automated schema versioning, migration validation, and deployment promotion — eliminating manual DBA intervention in release workflows.</li>
+              <li>Introduced <strong>pipeline-as-code standards, quality gates, and automated testing</strong> across delivery teams, improving build success rates through shift-left quality practices.</li>
+              <li>Consistently met <strong>SLA-bound incident management</strong> commitments — leading RCA, service restoration, and post-incident reviews while maintaining platform availability above 99%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accenture DevOps -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-role">DevOps Engineer</h3>
+                <div class="tc-company">Accenture</div>
+              </div>
+              <div class="tc-meta">
+                <span class="tc-date">Jan 2020 – Jul 2020</span>
+                <span class="tc-duration">7 mos</span>
+              </div>
+            </div>
+            <div class="tc-stack">
+              <span class="ts">Azure DevOps</span><span class="ts">Terraform</span><span class="ts">ARM Templates</span>
+              <span class="ts">Nagios</span><span class="ts">Grafana</span><span class="ts">Kibana</span><span class="ts">Azure Functions</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Designed and implemented <strong>Azure-based CI/CD pipelines</strong> for cloud-native microservices using Azure DevOps, Terraform, and ARM Templates, enabling reliable multi-environment deployments with full audit traceability.</li>
+              <li>Introduced <strong>GitOps-oriented workflows</strong>, establishing branch strategy, PR-gated deployments, and environment promotion controls — improving source control governance and deployment traceability across teams.</li>
+              <li>Automated provisioning of <strong>Azure infrastructure across dev, test, and production</strong> using Terraform and ARM Templates, reducing manual provisioning lead time and supporting rapid application onboarding.</li>
+              <li>Built application and infrastructure monitoring using <strong>Nagios, Grafana, and Kibana (ELK Stack)</strong>, reducing unplanned service disruptions through proactive alerting and improved system visibility.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accenture SRE -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-role">Site Reliability Engineer</h3>
+                <div class="tc-company">Accenture</div>
+              </div>
+              <div class="tc-meta">
+                <span class="tc-date">Nov 2017 – Dec 2019</span>
+                <span class="tc-duration">2 yrs 2 mos</span>
+              </div>
+            </div>
+            <div class="tc-stack">
+              <span class="ts">Jenkins</span><span class="ts">Kubernetes</span><span class="ts">Git</span>
+              <span class="ts">Prometheus</span><span class="ts">Nagios</span><span class="ts">Bash</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Engineered and maintained <strong>automated CI/CD pipelines using Jenkins</strong>, increasing deployment frequency and significantly reducing manual release intervention across multiple application teams.</li>
+              <li>Led a <strong>cross-team SVN-to-Git migration</strong>, modernizing version control practices and establishing branching strategies adopted organization-wide — enabling parallel feature development and full release traceability.</li>
+              <li>Designed and administered <strong>Jenkins master-agent architectures</strong> to support high-volume parallel builds, improving pipeline throughput and reducing build queue wait times.</li>
+              <li>Administered <strong>Kubernetes environments</strong>, implementing rolling updates and zero-downtime deployment strategies to maintain service continuity during frequent release cycles.</li>
+              <li>Delivered <strong>round-the-clock production support</strong>, consistently meeting aggressive MTTR targets through structured runbooks, on-call processes, and proactive capacity planning aligned with SRE principles.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// impact &amp; recognition</span>
+        <h2>Key Achievements</h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="ach-icon"><i class="fas fa-rocket"></i></div>
+          <div class="ach-metric">70%</div>
+          <div class="ach-title">Faster Release Cycles</div>
+          <p>Standardized CI/CD pipelines across 15+ teams, slashing release lead time through GitOps automation and pipeline-as-code.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon"><i class="fas fa-server"></i></div>
+          <div class="ach-metric">99%+</div>
+          <div class="ach-title">Platform Availability</div>
+          <p>Sustained enterprise platform uptime above 99% through SRE practices, self-healing automation, and proactive observability.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon"><i class="fas fa-bolt"></i></div>
+          <div class="ach-metric">Days &#8594; Hours</div>
+          <div class="ach-title">Environment Provisioning</div>
+          <p>Reduced environment setup from days to hours by building reusable Terraform and Ansible IaC modules for multi-region deployments.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="ach-metric">Shift-Left</div>
+          <div class="ach-title">DevSecOps Integration</div>
+          <p>Embedded security scanning, secrets management, and IAM hardening across SDLC — eliminating security bottlenecks at release.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon"><i class="fas fa-dollar-sign"></i></div>
+          <div class="ach-metric">40%</div>
+          <div class="ach-title">Cloud Cost Reduction</div>
+          <p>Drove measurable cloud cost savings through Databricks automation, right-sizing policies, and scheduled scale-down using AWS Step Functions.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon"><i class="fas fa-award"></i></div>
+          <div class="ach-metric">2x Certified</div>
+          <div class="ach-title">Industry Certifications</div>
+          <p>AWS Certified DevOps Engineer – Professional and Certified Kubernetes Administrator (CKA) — validating expertise at the highest industry level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// featured work</span>
+        <h2>Notable Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-infinity"></i></div>
+            <div class="project-links">
+              <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <h3>Enterprise GitOps Platform (AMD)</h3>
+          <p>Architected a full GitOps delivery platform using Argo CD and GitHub Actions with self-hosted ARC runners, enabling secure, automated, and auditable deployments across AKS clusters in a regulated environment.</p>
+          <div class="project-tags">
+            <span>Argo CD</span><span>GitHub Actions</span><span>ARC Runners</span><span>AKS</span><span>Terraform</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-eye"></i></div>
+            <div class="project-links">
+              <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <h3>Centralized Observability Stack</h3>
+          <p>Built an enterprise-grade observability platform integrating Prometheus, Grafana, Dynatrace APM, and Splunk — providing real-time SLA/SLO dashboards, distributed tracing, and proactive alerting across cloud infrastructure.</p>
+          <div class="project-tags">
+            <span>Prometheus</span><span>Grafana</span><span>Dynatrace</span><span>Splunk</span><span>OpenTelemetry</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-cubes"></i></div>
+            <div class="project-links">
+              <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <h3>IaC Module Library (Cognizant)</h3>
+          <p>Designed a reusable Terraform and Ansible module library enabling 15+ teams to provision consistent, policy-compliant AWS and Azure environments — reducing provisioning time from days to hours across multiple regions.</p>
+          <div class="project-tags">
+            <span>Terraform</span><span>Ansible</span><span>AWS</span><span>Azure</span><span>Helm</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-database"></i></div>
+            <div class="project-links">
+              <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <h3>Databricks Cost Optimization</h3>
+          <p>Automated Databricks infrastructure provisioning and job orchestration using Terraform, Python, and AWS Step Functions — delivering measurable cloud cost reduction through right-sizing and intelligent scale-down policies.</p>
+          <div class="project-tags">
+            <span>Databricks</span><span>Terraform</span><span>Python</span><span>Step Functions</span><span>Lambda</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+            <div class="project-links">
+              <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <h3>DevSecOps Pipeline Integration</h3>
+          <p>Embedded end-to-end security across the SDLC using HashiCorp Vault, Aqua Security, IAM hardening, and automated vulnerability scanning — enabling shift-left security without slowing delivery velocity.</p>
+          <div class="project-tags">
+            <span>HashiCorp Vault</span><span>Aqua Security</span><span>IAM</span><span>KMS</span><span>OWASP</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-code-branch"></i></div>
+            <div class="project-links">
+              <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <h3>CI/CD Transformation (15+ Teams)</h3>
+          <p>Led enterprise-wide pipeline standardization across 15+ Agile teams at Cognizant, introducing pipeline-as-code, quality gates, and automated testing — improving build success rates and release confidence organization-wide.</p>
+          <div class="project-tags">
+            <span>Jenkins</span><span>SonarQube</span><span>Docker</span><span>Nexus</span><span>UrbanCode</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & EDUCATION -->
+  <section id="certs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// credentials</span>
+        <h2>Certifications &amp; Education</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-logo"><i class="fab fa-aws"></i></div>
+          <div class="cert-info">
+            <h3>AWS Certified DevOps Engineer</h3>
+            <p>Professional Level — Amazon Web Services</p>
+            <span class="cert-level pro">Professional</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo cka"><i class="fas fa-dharmachakra"></i></div>
+          <div class="cert-info">
+            <h3>Certified Kubernetes Administrator</h3>
+            <p>CKA — Cloud Native Computing Foundation (CNCF)</p>
+            <span class="cert-level cka-badge">Administrator</span>
+          </div>
+        </div>
+        <div class="cert-card edu">
+          <div class="cert-logo edu-logo"><i class="fas fa-graduation-cap"></i></div>
+          <div class="cert-info">
+            <h3>B.Tech — Computer Science &amp; Engineering</h3>
+            <p>Jawaharlal Nehru Technological University (JNTU), Hyderabad, India</p>
+            <span class="cert-level edu-badge">B.Tech</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// let's connect</span>
+        <h2>Get In Touch</h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-text">
+          <p>I'm actively exploring <strong>Senior DevOps, Platform Engineering, SRE, and Cloud Infrastructure</strong> opportunities.
+          If you're hiring or know someone who is, I'd love to connect.</p>
+          <div class="contact-links">
+            <a href="mailto:prnalla.2312@gmail.com" class="contact-link">
+              <i class="fas fa-envelope"></i>
+              <div><span>Email</span><strong>prnalla.2312@gmail.com</strong></div>
+            </a>
+            <a href="tel:+15194652312" class="contact-link">
+              <i class="fas fa-phone"></i>
+              <div><span>Phone</span><strong>+1 519-465-2312</strong></div>
+            </a>
+            <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" class="contact-link">
+              <i class="fab fa-linkedin"></i>
+              <div><span>LinkedIn</span><strong>linkedin.com/in/prashanth-nalla</strong></div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <div class="open-to-work">
+            <div class="otw-dot"></div>
+            <div>
+              <strong>Open to Work</strong>
+              <p>Available for immediate start</p>
+            </div>
+          </div>
+          <a href="mailto:prnalla.2312@gmail.com?subject=DevOps%20Opportunity%20for%20Prashanth%20Nalla" class="btn btn-primary btn-lg">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </a>
+          <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank" class="btn btn-secondary btn-lg">
+            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-logo">Prashanth Nalla</span>
+        <span class="footer-copy">Senior DevOps Engineer | Open to Opportunities</span>
+        <div class="footer-links">
+          <a href="mailto:prnalla.2312@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/prashanth-nalla-b593a0353" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
