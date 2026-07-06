@@ -77,6 +77,8 @@ section { padding: 96px 0; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,212,255,.4); opacity: 1; }
 .btn-secondary { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
 .btn-secondary:hover { background: rgba(0,212,255,.08); transform: translateY(-2px); opacity: 1; }
+.btn-download { background: transparent; color: var(--green); border: 1.5px solid var(--green); }
+.btn-download:hover { background: rgba(16,185,129,.08); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16,185,129,.25); opacity: 1; }
 .btn-lg { padding: 14px 28px; font-size: 1rem; }
 
 /* ===== HERO ===== */

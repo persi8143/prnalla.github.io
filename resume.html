@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prashanth Nalla — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #1a1a2e;
+      background: #f0f2f5;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      display: grid;
+      grid-template-columns: 68mm 1fr;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 28px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .profile-name {
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .profile-title {
+      font-size: 9.5px;
+      color: #00d4ff;
+      font-weight: 600;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .sidebar-divider {
+      border: none;
+      border-top: 1px solid #1e3a5f;
+      margin: 0;
+    }
+
+    .sidebar-section-title {
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #00d4ff;
+      margin-bottom: 10px;
+    }
+
+    /* Contact */
+    .contact-list { display: flex; flex-direction: column; gap: 7px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 7px; font-size: 9.5px; color: #cbd5e1; }
+    .contact-icon { width: 14px; flex-shrink: 0; text-align: center; }
+
+    /* Skills */
+    .skill-group { margin-bottom: 10px; }
+    .skill-group-label { font-size: 8.5px; font-weight: 600; color: #94a3b8; margin-bottom: 5px; text-transform: uppercase; letter-spacing: .04em; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .skill-tag {
+      background: #1e3a5f;
+      color: #93c5fd;
+      font-size: 8px;
+      padding: 2px 7px;
+      border-radius: 100px;
+      font-weight: 500;
+    }
+    .skill-tag.highlight {
+      background: rgba(0,212,255,0.15);
+      color: #00d4ff;
+    }
+
+    /* Certs */
+    .cert-item { margin-bottom: 8px; }
+    .cert-name { font-size: 9.5px; font-weight: 600; color: #e2e8f0; }
+    .cert-body { font-size: 8.5px; color: #94a3b8; margin-top: 1px; }
+
+    /* Education */
+    .edu-degree { font-size: 9.5px; font-weight: 600; color: #e2e8f0; }
+    .edu-school { font-size: 8.5px; color: #94a3b8; margin-top: 2px; }
+    .edu-year { font-size: 8px; color: #64748b; margin-top: 1px; }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .main-section-title {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #0f172a;
+      border-bottom: 2px solid #00d4ff;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 9.5px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    /* Stats row */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .stat-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px 6px;
+      text-align: center;
+    }
+    .stat-num { font-size: 14px; font-weight: 700; color: #0f172a; display: block; }
+    .stat-lbl { font-size: 7.5px; color: #64748b; display: block; margin-top: 1px; }
+
+    /* Experience */
+    .exp-item { margin-bottom: 14px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2px; }
+    .exp-role { font-size: 11px; font-weight: 700; color: #0f172a; }
+    .exp-date { font-size: 8.5px; color: #64748b; white-space: nowrap; margin-left: 8px; flex-shrink: 0; }
+    .exp-company { font-size: 9.5px; font-weight: 600; color: #0369a1; margin-bottom: 5px; }
+    .exp-location { font-size: 8.5px; color: #94a3b8; font-weight: 400; margin-left: 6px; }
+    .exp-stack { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 6px; }
+    .exp-tag {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 7.5px;
+      padding: 1px 6px;
+      border-radius: 100px;
+      border: 1px solid #e2e8f0;
+    }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .exp-bullets li {
+      font-size: 9px;
+      color: #374151;
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: #0369a1; font-size: 8px; }
+    .exp-bullets strong { color: #0f172a; font-weight: 600; }
+
+    .exp-divider { border: none; border-top: 1px dashed #e2e8f0; margin: 12px 0; }
+
+    /* Print */
+    .print-btn {
+      display: block;
+      width: 210mm;
+      margin: 0 auto 12px;
+      text-align: right;
+    }
+    .print-btn button {
+      background: #0f172a;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .print-btn button:hover { background: #1e3a5f; }
+
+    @media print {
+      body { background: #fff; }
+      .print-btn { display: none; }
+      .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; }
+      @page { margin: 0; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-btn">
+    <button onclick="window.print()">&#8595; Save as PDF (Ctrl+P)</button>
+  </div>
+
+  <div class="page">
+
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+
+      <div>
+        <div class="profile-name">Prashanth<br>Nalla</div>
+        <div class="profile-title">Senior DevOps Engineer<br>Cloud · SRE · GitOps · Platform</div>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <!-- Contact -->
+      <div>
+        <div class="sidebar-section-title">Contact</div>
+        <div class="contact-list">
+          <div class="contact-item"><span class="contact-icon">✉</span><span>prnalla.2312@gmail.com</span></div>
+          <div class="contact-item"><span class="contact-icon">✆</span><span>+1 519-465-2312</span></div>
+          <div class="contact-item"><span class="contact-icon">⚲</span><span>Markham, Ontario, Canada</span></div>
+          <div class="contact-item"><span class="contact-icon">in</span><span>linkedin.com/in/prashanth-nalla-b593a0353</span></div>
+          <div class="contact-item"><span class="contact-icon">⌂</span><span>persi8143.github.io/prnalla.github.io</span></div>
+        </div>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <!-- Skills -->
+      <div>
+        <div class="sidebar-section-title">Core Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Cloud</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">AWS</span>
+            <span class="skill-tag highlight">Azure</span>
+            <span class="skill-tag">EKS</span>
+            <span class="skill-tag">AKS</span>
+            <span class="skill-tag">EC2</span>
+            <span class="skill-tag">Lambda</span>
+            <span class="skill-tag">S3</span>
+            <span class="skill-tag">IAM</span>
+            <span class="skill-tag">KMS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">CI/CD & GitOps</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Argo CD</span>
+            <span class="skill-tag highlight">GitHub Actions</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">ARC Runners</span>
+            <span class="skill-tag">Azure DevOps</span>
+            <span class="skill-tag">CodePipeline</span>
+            <span class="skill-tag">UCD</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Containers & IaC</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Kubernetes</span>
+            <span class="skill-tag highlight">Terraform</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Helm</span>
+            <span class="skill-tag">Ansible</span>
+            <span class="skill-tag">Kustomize</span>
+            <span class="skill-tag">CloudFormation</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Observability & SRE</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Prometheus</span>
+            <span class="skill-tag highlight">Grafana</span>
+            <span class="skill-tag">Dynatrace</span>
+            <span class="skill-tag">Splunk</span>
+            <span class="skill-tag">ELK Stack</span>
+            <span class="skill-tag">OpenTelemetry</span>
+            <span class="skill-tag">CloudWatch</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Security & DevSecOps</div>
+          <div class="skill-tags">
+            <span class="skill-tag">HashiCorp Vault</span>
+            <span class="skill-tag">Aqua Security</span>
+            <span class="skill-tag">RBAC</span>
+            <span class="skill-tag">OWASP</span>
+            <span class="skill-tag">Shift-Left</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Scripting & AI</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Bash</span>
+            <span class="skill-tag">GitHub Copilot</span>
+            <span class="skill-tag">Claude AI</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <!-- Certifications -->
+      <div>
+        <div class="sidebar-section-title">Certifications</div>
+        <div class="cert-item">
+          <div class="cert-name">AWS Certified DevOps Engineer</div>
+          <div class="cert-body">Professional — Amazon Web Services</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">Certified Kubernetes Administrator</div>
+          <div class="cert-body">CKA — CNCF</div>
+        </div>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <!-- Education -->
+      <div>
+        <div class="sidebar-section-title">Education</div>
+        <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
+        <div class="edu-school">Jawaharlal Nehru Technological University (JNTU), Hyderabad, India</div>
+        <div class="edu-year">2010</div>
+      </div>
+
+    </aside>
+
+    <!-- ══ MAIN ══ -->
+    <main class="main">
+
+      <!-- Summary -->
+      <div>
+        <div class="main-section-title">Professional Summary</div>
+        <p class="summary-text">
+          Senior DevOps Engineer with <strong>7+ years</strong> of experience delivering highly available, secure, and automated cloud platforms across insurance, financial services, and enterprise technology. Deep hands-on expertise in <strong>AWS, Azure, Kubernetes (EKS/AKS), Terraform, Ansible, and GitOps-driven CI/CD</strong>. Proven track record in DevSecOps, SRE practices, observability, and AI-assisted automation — driving measurable improvements in deployment velocity, system resilience, and cloud cost optimisation across large-scale regulated environments.
+        </p>
+        <div class="stats-row">
+          <div class="stat-box"><span class="stat-num">7+</span><span class="stat-lbl">Years Experience</span></div>
+          <div class="stat-box"><span class="stat-num">99%+</span><span class="stat-lbl">Platform Uptime</span></div>
+          <div class="stat-box"><span class="stat-num">15+</span><span class="stat-lbl">Teams Supported</span></div>
+          <div class="stat-box"><span class="stat-num">40%</span><span class="stat-lbl">Cloud Cost Saved</span></div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div>
+        <div class="main-section-title">Professional Experience</div>
+
+        <!-- AMD -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Senior DevOps Engineer</div>
+            <div class="exp-date">July 2025 – Present</div>
+          </div>
+          <div class="exp-company">AMD <span class="exp-location">Markham, Ontario</span></div>
+          <div class="exp-stack">
+            <span class="exp-tag">Jenkins</span><span class="exp-tag">GitHub Actions</span>
+            <span class="exp-tag">Argo CD</span><span class="exp-tag">AKS</span>
+            <span class="exp-tag">Terraform</span><span class="exp-tag">Prometheus</span>
+            <span class="exp-tag">Grafana</span><span class="exp-tag">Dynatrace</span>
+            <span class="exp-tag">HashiCorp Vault</span><span class="exp-tag">Aqua Security</span>
+            <span class="exp-tag">ARC Runners</span><span class="exp-tag">GitHub Copilot</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Architected end-to-end <strong>GitOps pipelines</strong> using Jenkins, GitHub Actions, and Argo CD, standardizing declarative delivery across microservices and reducing release lead time across all environments.</li>
+            <li>Configured <strong>GitHub ARC self-hosted runners</strong> (actions-runner-controller) with registry proxy and monitoring, enabling secure, scalable, and observable CI execution within the enterprise perimeter.</li>
+            <li>Designed and provisioned production-grade <strong>AKS infrastructure using Terraform and Ansible</strong>, implementing high availability, automated drift detection, and regulatory compliance guardrails.</li>
+            <li>Established centralized observability with <strong>Prometheus, Grafana, and Dynatrace APM</strong> — enabling distributed tracing and reducing MTTD across cloud infrastructure.</li>
+            <li>Embedded <strong>DevSecOps practices</strong> across the SDLC: HashiCorp Vault secrets management, Aqua Security container scanning, IAM hardening, and AWS KMS encryption.</li>
+            <li>Led <strong>24x7 production support</strong> with self-healing automation, structured runbooks, and incident workflows — maintaining platform SLA adherence.</li>
+          </ul>
+        </div>
+
+        <hr class="exp-divider" />
+
+        <!-- Cognizant -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Senior Infrastructure Developer</div>
+            <div class="exp-date">Mar 2021 – Jul 2024</div>
+          </div>
+          <div class="exp-company">Cognizant Technology Solutions <span class="exp-location">3 yrs 5 mos</span></div>
+          <div class="exp-stack">
+            <span class="exp-tag">Jenkins</span><span class="exp-tag">EKS</span>
+            <span class="exp-tag">AKS</span><span class="exp-tag">Terraform</span>
+            <span class="exp-tag">Ansible</span><span class="exp-tag">Splunk</span>
+            <span class="exp-tag">Dynatrace</span><span class="exp-tag">SonarQube</span>
+            <span class="exp-tag">IBM UrbanCode</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Spearheaded <strong>enterprise CI/CD transformation across 15+ Agile teams</strong>, standardizing pipelines with Jenkins, SonarQube, Docker, and IBM UrbanCode Deploy.</li>
+            <li>Designed and hardened <strong>Kubernetes platforms (EKS and AKS)</strong> enforcing RBAC, network policies, and security baselines across multi-tenant environments.</li>
+            <li>Built <strong>reusable Terraform and Ansible IaC modules</strong> reducing environment provisioning from days to hours across multiple AWS and Azure regions.</li>
+            <li>Engineered <strong>Splunk and Dynatrace dashboards</strong> aggregating metrics and traces — sustaining <strong>99%+ platform availability</strong> across enterprise Kubernetes workloads.</li>
+            <li>Delivered <strong>Database-as-Code pipelines</strong> for Oracle and PostgreSQL, eliminating manual DBA intervention through automated schema versioning and deployment promotion.</li>
+          </ul>
+        </div>
+
+        <hr class="exp-divider" />
+
+        <!-- Accenture DevOps -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">DevOps Engineer</div>
+            <div class="exp-date">Jan 2020 – Jul 2020</div>
+          </div>
+          <div class="exp-company">Accenture Solutions <span class="exp-location">7 mos</span></div>
+          <div class="exp-stack">
+            <span class="exp-tag">Azure DevOps</span><span class="exp-tag">Terraform</span>
+            <span class="exp-tag">ARM Templates</span><span class="exp-tag">Nagios</span>
+            <span class="exp-tag">Grafana</span><span class="exp-tag">Kibana</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Designed <strong>Azure-based CI/CD pipelines</strong> using Azure DevOps, Terraform, and ARM Templates — enabling multi-environment deployments with full audit traceability.</li>
+            <li>Introduced <strong>GitOps workflows</strong> with branch strategy, PR-gated deployments, and environment promotion controls — improving governance across development teams.</li>
+            <li>Built monitoring using <strong>Nagios, Grafana, and ELK Stack</strong>, reducing unplanned service disruptions through proactive alerting.</li>
+          </ul>
+        </div>
+
+        <hr class="exp-divider" />
+
+        <!-- Accenture SRE -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Site Reliability Engineer</div>
+            <div class="exp-date">Nov 2017 – Dec 2019</div>
+          </div>
+          <div class="exp-company">Accenture Solutions <span class="exp-location">2 yrs 2 mos</span></div>
+          <div class="exp-stack">
+            <span class="exp-tag">Jenkins</span><span class="exp-tag">Kubernetes</span>
+            <span class="exp-tag">Git</span><span class="exp-tag">Prometheus</span>
+            <span class="exp-tag">Nagios</span><span class="exp-tag">Bash</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Engineered <strong>automated CI/CD pipelines using Jenkins</strong>, increasing deployment frequency and reducing manual release intervention across multiple application teams.</li>
+            <li>Led <strong>cross-team SVN-to-Git migration</strong>, modernizing version control and establishing branching strategies adopted organization-wide.</li>
+            <li>Administered <strong>Kubernetes environments</strong> with rolling updates and zero-downtime deployments — delivering 24x7 production support and consistently meeting aggressive MTTR targets.</li>
+          </ul>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>
